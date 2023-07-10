@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+}
+
+body{
+    width: 375px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    padding-top: 10px;
+}
+.text-container h3{
+    margin-top: 10px;
+    margin-bottom: -18px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1.16rem;
+    opacity: 0.4;
+}
+.text-container h1{
+    margin-bottom: 5px;
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 0.9;
+}
+.text-container p{
+    font-family: Montserrat;
+    font-weight: 500;
+    width: 91%;
+    line-height: 1.5;
+    color: hsl(228, 12%, 48%);
+    opacity: 0.8;
+}
+.text-container .price-container{
+    display: flex;
+    align-items: center;
+    margin-top: -40px;
+}
+.text-container .price-container p.actual-price{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: hsl(158, 43%, 33%);
+}
+.text-container .price-container p.original-price{
+    margin-left: -8%;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+.text-container button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    background-color: hsl(158, 43%, 33%);
+    border-radius: 10px;
+    border: none;
+}
+button:hover{
+    background-color: hsl(158, 46%, 22%);
+    cursor: pointer;
+}
+.text-container button p{
+    font-family: Montserrat;
+    font-weight: 700;
+    color: white;
+    opacity: 1;
+    font-size: 1.1rem;
+    margin-right: 25%;
+}
+.text-container button .cart-image{
+    margin-left: 33%;
+}
+
+.mobile-img{
+    display: flex;
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.desktop-img{
+    display: none;
+}
+
+@media (min-width: 600px){
+
+    body{
+        width: 600px;
+        background-color: white;
+    }
+
+    .main-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+    .text-container{
+        width: 100%;
+    }
+    .text-container .price-container p.original-price{
+        margin-left: 5%;
+    }
+    .text-container button p{
+        font-size: 1rem;
+        margin-left: 4px;
+    }
+    .text-container button .cart-image{
+        margin-right: 1px;
+        margin-left: 30%;
+    }
+
+    .mobile-img{
+        display: none;
+    }
+    .desktop-img{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
